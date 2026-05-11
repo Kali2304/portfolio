@@ -4,18 +4,89 @@ import {
 import Image from "next/image";
 
 const skills = [
-  { title: "AI & LLMs", icon: Brain },
-  { title: "Next.js", icon: Globe },
-  { title: "Python", icon: Code2 },
-  { title: "Tailwind CSS", icon: Wind },
-  { title: "UI/UX Design", icon: Palette },
-  { title: "APIs", icon: Database },
-  { title: "GitHub", icon: GitBranch },
-  { title: "Automation", icon: Bot },
-  { title: "React", icon: Globe },
-{ title: "Node.js", icon: Bot },
-{ title: "SQL", icon: Database },
-{ title: "Machine Learning", icon: Brain },
+  {
+    title: "AI & LLMs",
+    icon: Brain,
+    description:
+      "Building intelligent systems powered by modern AI models and conversational experiences.",
+  },
+
+  {
+    title: "Next.js",
+    icon: Globe,
+    description:
+      "Creating fast, scalable, and modern full-stack web applications with seamless performance.",
+  },
+
+  {
+    title: "Python",
+    icon: Code2,
+    description:
+      "Developing automation tools, AI systems, and backend logic with clean and efficient code.",
+  },
+
+  {
+    title: "Tailwind CSS",
+    icon: Wind,
+    description:
+      "Designing responsive and elegant interfaces with utility-first modern styling workflows.",
+  },
+
+  {
+    title: "UI/UX Design",
+    icon: Palette,
+    description:
+      "Crafting intuitive user experiences focused on clarity, accessibility, and visual balance.",
+  },
+
+  {
+    title: "APIs",
+    icon: Database,
+    description:
+      "Integrating external services and building reliable data-driven application architectures.",
+  },
+
+  {
+    title: "GitHub",
+    icon: GitBranch,
+    description:
+      "Managing version control, collaboration, and deployment workflows across development projects.",
+  },
+
+  {
+    title: "Automation",
+    icon: Bot,
+    description:
+      "Building smart automation systems that streamline repetitive tasks and improve productivity.",
+  },
+
+  {
+    title: "React",
+    icon: Globe,
+    description:
+      "Creating interactive and component-based user interfaces with smooth frontend experiences.",
+  },
+
+  {
+    title: "Node.js",
+    icon: Bot,
+    description:
+      "Developing scalable server-side applications and REST APIs with efficient backend architecture.",
+  },
+
+  {
+    title: "SQL",
+    icon: Database,
+    description:
+      "Designing structured databases and managing relational data with optimized queries.",
+  },
+
+  {
+    title: "Machine Learning",
+    icon: Brain,
+    description:
+      "Training intelligent models capable of pattern recognition, prediction, and smart decision-making.",
+  },
 ];
 
 const btnPrimary: React.CSSProperties = {
@@ -295,10 +366,9 @@ export default function Home() {
                   margin: 0,
                 }}
               >
-                I&apos;m passionate about building modern digital experiences
-                that combine thoughtful design with intelligent technology. I
-                enjoy creating AI-powered applications, interactive interfaces,
-                and systems that feel intuitive, welcoming, and useful.
+                I specialize in bridging the gap between sophisticated technology and human-centered design.
+                        My focus is on engineering AI-powered applications and interactive systems that do more than just function—they feel intuitive, welcoming, and intentional.
+                        I believe technology should be a quiet enabler, leaving users feeling inspired, capable, and more connected to the world around them.
               </p>
 
               <p
@@ -384,8 +454,7 @@ export default function Home() {
                       margin: 0,
                     }}
                   >
-                    Building thoughtful and modern digital experiences with
-                    simplicity and clarity.
+                    {skill.description}
                   </p>
                 </div>
               );
@@ -617,6 +686,201 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* Contact */}
+<section id="contact" style={{ padding: "80px 0 140px" }}>
+  <div style={{ maxWidth: "700px", marginBottom: "50px" }}>
+    <p style={sectionLabel}>Contact</p>
+
+    <h2 style={sectionHeading}>
+      Let&apos;s connect and build something meaningful together.
+    </h2>
+  </div>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+      gap: "20px",
+    }}
+  >
+    {/* LinkedIn */}
+    <a
+      href="www.linkedin.com/in/manas-chhonker-7aa5312b8"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        ...card,
+        textDecoration: "none",
+        color: "var(--foreground)",
+      }}
+    >
+      <p
+        style={{
+          fontSize: "12px",
+          letterSpacing: "0.15em",
+          textTransform: "uppercase",
+          color: "var(--accent)",
+          marginBottom: "18px",
+        }}
+      >
+        LinkedIn
+      </p>
+
+      <h3
+        style={{
+          fontSize: "22px",
+          margin: "0 0 14px",
+          fontWeight: 600,
+        }}
+      >
+        Manas Chhonker
+      </h3>
+
+      <p
+        style={{
+          fontSize: "14px",
+          lineHeight: "1.9",
+          color: "var(--muted)",
+          margin: 0,
+        }}
+      >
+        Connect professionally and explore my experience, projects, and journey.
+      </p>
+    </a>
+
+    {/* GitHub */}
+    <a
+      href="https://github.com/Kali2304"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        ...card,
+        textDecoration: "none",
+        color: "var(--foreground)",
+      }}
+    >
+      <p
+        style={{
+          fontSize: "12px",
+          letterSpacing: "0.15em",
+          textTransform: "uppercase",
+          color: "var(--accent)",
+          marginBottom: "18px",
+        }}
+      >
+        Github
+      </p>
+
+      <h3
+        style={{
+          fontSize: "22px",
+          margin: "0 0 14px",
+          fontWeight: 600,
+        }}
+      >
+        Kali2304
+      </h3>
+
+      <p
+        style={{
+          fontSize: "14px",
+          lineHeight: "1.9",
+          color: "var(--muted)",
+          margin: 0,
+        }}
+      >
+        Explore my repositories, development projects, and open-source work.
+      </p>
+    </a>
+
+    {/* Email */}
+    <a
+      href="mailto:manaschhonker2005@gmail.com"
+      style={{
+        ...card,
+        textDecoration: "none",
+        color: "var(--foreground)",
+      }}
+    >
+      <p
+        style={{
+          fontSize: "12px",
+          letterSpacing: "0.15em",
+          textTransform: "uppercase",
+          color: "var(--accent)",
+          marginBottom: "18px",
+        }}
+      >
+        Email
+      </p>
+
+      <h3
+        style={{
+          fontSize: "22px",
+          margin: "0 0 14px",
+          fontWeight: 600,
+          wordBreak: "break-word",
+        }}
+      >
+        manaschhonker2005@gmail.com
+      </h3>
+
+      <p
+        style={{
+          fontSize: "14px",
+          lineHeight: "1.9",
+          color: "var(--muted)",
+          margin: 0,
+        }}
+      >
+        Reach out directly for collaborations, opportunities, or discussions.
+      </p>
+    </a>
+
+    {/* Phone */}
+    <a
+      href="tel:+91 9054871422"
+      style={{
+        ...card,
+        textDecoration: "none",
+        color: "var(--foreground)",
+      }}
+    >
+      <p
+        style={{
+          fontSize: "12px",
+          letterSpacing: "0.15em",
+          textTransform: "uppercase",
+          color: "var(--accent)",
+          marginBottom: "18px",
+        }}
+      >
+        Phone
+      </p>
+
+      <h3
+        style={{
+          fontSize: "22px",
+          margin: "0 0 14px",
+          fontWeight: 600,
+        }}
+      >
+        +91 9054 871422
+      </h3>
+
+      <p
+        style={{
+          fontSize: "14px",
+          lineHeight: "1.9",
+          color: "var(--muted)",
+          margin: 0,
+        }}
+      >
+        Available for networking, project discussions, and collaboration.
+      </p>
+    </a>
+  </div>
+</section>
       </main>
 
       {/* Back To Top */}
