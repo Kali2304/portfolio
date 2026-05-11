@@ -12,6 +12,10 @@ const skills = [
   { title: "APIs", icon: Database },
   { title: "GitHub", icon: GitBranch },
   { title: "Automation", icon: Bot },
+  { title: "React", icon: Globe },
+{ title: "Node.js", icon: Bot },
+{ title: "SQL", icon: Database },
+{ title: "Machine Learning", icon: Brain },
 ];
 
 const btnPrimary: React.CSSProperties = {
@@ -325,7 +329,7 @@ export default function Home() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
               gap: "18px",
             }}
           >
