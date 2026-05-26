@@ -4,7 +4,7 @@ import {
   Brain, Globe, GitBranch, Code2, Palette, Bot, Wind, Database, Server, Layers,
 } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useRef, useState, CSSProperties, ReactNode } from "react";
+import React, { useEffect, useState, CSSProperties, ReactNode } from "react";
 import { useInView } from "@/hooks/useInView";
 
 /* ─────────────────────────────────────────
@@ -63,7 +63,7 @@ interface AnimProps {
   children: ReactNode;
   style?: CSSProperties;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
 }
 
 function Anim({ dir = "up", delay = 0, children, style, className, as: Tag = "div" }: AnimProps) {
@@ -74,7 +74,6 @@ function Anim({ dir = "up", delay = 0, children, style, className, as: Tag = "di
     ...(inView ? visibleStyle : getInitial(dir)),
     ...style,
   };
-  // @ts-expect-error dynamic tag
   return <Tag ref={ref} style={combined} className={className}>{children}</Tag>;
 }
 
