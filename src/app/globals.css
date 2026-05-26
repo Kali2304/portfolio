@@ -1,15 +1,20 @@
 @import "tailwindcss";
 
+/* ── Design tokens ── */
 :root {
   --background: #f5f1eb;
   --foreground: #2b2b2b;
   --muted: #6b6b6b;
-  --card: #efe7dc;
+  --card: #ede7df;
   --accent: #b08968;
   --border: #d8cfc4;
+  --surface: rgba(255, 255, 255, 0.55);
 }
 
-* {
+/* ── Reset ── */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -17,6 +22,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Offset scroll targets so sticky nav doesn't overlap */
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -25,9 +32,65 @@ body {
   overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* ── Selection ── */
 ::selection {
   background: var(--accent);
-  color: white;
+  color: #fff;
+}
+
+/* ── Scrollbar (webkit) ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ── Focus rings ── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  /* Stack hero, about, projects grids on mobile */
+  section > div[style*="grid-template-columns: 1fr 1fr"],
+  section > div[style*="gridTemplateColumns: '1fr 1fr'"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  section > div[style*="repeat(4, 1fr)"],
+  section > div[style*="repeat(2, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  main {
+    padding: 0 20px !important;
+  }
+
+  header > div {
+    padding: 16px 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section > div[style*="repeat(2, 1fr)"],
+  section > div[style*="repeat(4, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
 }

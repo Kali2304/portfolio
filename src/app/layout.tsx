@@ -13,8 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Manas – Portfolio",
-  description: "Personal portfolio",
+  title: "Manas Chhonker – Portfolio",
+  description: "AI engineer & full-stack developer building thoughtful digital experiences.",
+  openGraph: {
+    title: "Manas Chhonker – Portfolio",
+    description: "AI engineer & full-stack developer building thoughtful digital experiences.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
